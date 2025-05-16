@@ -6,7 +6,7 @@
 /*   By: peli <peli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 12:19:54 by peli              #+#    #+#             */
-/*   Updated: 2025/05/16 15:21:01 by peli             ###   ########.fr       */
+/*   Updated: 2025/05/16 18:20:16 by peli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-private:
+protected:
     std::string Name;
     int         Hit_points;
     int         Energy_points;
@@ -25,7 +25,7 @@ private:
 public:
     ClapTrap(const std::string& name);
     ~ClapTrap();
-    void attack(const std::string& target);
+    virtual void attack(const std::string& target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 };

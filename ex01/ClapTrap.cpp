@@ -6,7 +6,7 @@
 /*   By: peli <peli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 12:19:57 by peli              #+#    #+#             */
-/*   Updated: 2025/05/16 18:30:54 by peli             ###   ########.fr       */
+/*   Updated: 2025/05/16 18:20:36 by peli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ void ClapTrap::attack(const std::string& target)
     if (Hit_points > 0 && Energy_points > 0)
     {
         Energy_points--;
-        std::cout << "🤖ClapTrap " << Name << " attacks " << target << ", causing " << Attack_damage << " points of damage!" << std::endl;
+        std::cout << "ClapTrap " << Name << " attacks " << target << ", causing " << Attack_damage << " points of damage!" << std::endl;
     }
     else
-        std::cout << "🤖ClapTrap " << Name << " can't attack" << target << std::endl;
+        std::cout << "ClapTrap " << Name << " can't attack" << target << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
@@ -41,7 +41,7 @@ void ClapTrap::takeDamage(unsigned int amount)
     if (Hit_points > 0)
     {
         Hit_points -= amount;
-        std::cout << "🤖ClapTrap " << Name << " lost " << amount << " points of damage!" << std::endl;
+        std::cout << "ClapTrap " << Name << " lost " << amount << " points of damage!" << std::endl;
     }
     else
         std::cout << Name << " can't take damage" << std::endl;
@@ -53,10 +53,10 @@ void ClapTrap::beRepaired(unsigned int amount)
     {
         Hit_points += amount;
         Energy_points--;
-        std::cout << "🤖ClapTrap " << Name << " regains " << amount << " hit point" << std::endl;
+        std::cout << "ClapTrap " << Name << " regains " << amount << " hit point" << std::endl;
     }
     else
-        std::cout << "🤖ClapTrap " << Name << "'s hit point already full" << std::endl;
+        std::cout << "ClapTrap " << Name << "'s hit point already full" << std::endl;
 }
 
 // class ClapTrap {

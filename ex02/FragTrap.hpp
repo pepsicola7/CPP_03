@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: peli <peli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/15 12:19:50 by peli              #+#    #+#             */
-/*   Updated: 2025/05/16 15:28:46 by peli             ###   ########.fr       */
+/*   Created: 2025/05/16 18:33:20 by peli              #+#    #+#             */
+/*   Updated: 2025/05/16 18:52:24 by peli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+#include <iostream>
+#include <string>
+#include <cmath>
 #include "ClapTrap.hpp"
 
-int main()
+class FragTrap: public ClapTrap
 {
-    ClapTrap war("A");
-    war.attack("B");
-    war.takeDamage(3);
-    war.beRepaired(5);
-    war.attack("C");
-    war.takeDamage(15);
-    war.beRepaired(2);
-    return (0);
-}
+public:
+    FragTrap(const std::string& name);
+    ~FragTrap();
+    void attack(const std::string& target);
+    void highFivesGuys(void);
+};
